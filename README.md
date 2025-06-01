@@ -14,7 +14,12 @@ View new image:
 docker images
 ```
 
-Mount to share files with the container 
+Mount to share files with the container:
 ```
 docker run -it -v $PWD/source:/my_source_code my_image
+```
+
+Mount to share files with the container for a specific user:
+```
+docker run -it --user ros -v $PWD/source:/my_source_code my_image
 ```
